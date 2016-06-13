@@ -13,7 +13,6 @@
                 </Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="settingsButton" Icon="Setting" Label="Settings"/>
-            <AppBarSeparator/>
             <AppBarButton x:Name="appBarButton" Icon="Video" Label="appbarbutton"/>
 
         </CommandBar>
