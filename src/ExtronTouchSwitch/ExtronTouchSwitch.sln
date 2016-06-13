@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidSwitch", "VidSwitch\VidSwitch.csproj", "{FA85557B-108E-4737-97D0-F7A0389D078B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidSwitchTests", "VidSwitchTests\VidSwitchTests.csproj", "{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|ARM.Build.0 = Debug|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x64.ActiveCfg = Debug|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x64.Build.0 = Debug|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x64.Deploy.0 = Debug|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x86.ActiveCfg = Debug|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x86.Build.0 = Debug|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Debug|x86.Deploy.0 = Debug|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|Any CPU.ActiveCfg = Release|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|ARM.ActiveCfg = Release|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|ARM.Build.0 = Release|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|ARM.Deploy.0 = Release|ARM
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x64.ActiveCfg = Release|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x64.Build.0 = Release|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x64.Deploy.0 = Release|x64
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x86.ActiveCfg = Release|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x86.Build.0 = Release|x86
+		{FA85557B-108E-4737-97D0-F7A0389D078B}.Release|x86.Deploy.0 = Release|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|ARM.ActiveCfg = Debug|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|ARM.Build.0 = Debug|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|ARM.Deploy.0 = Debug|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x64.ActiveCfg = Debug|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x64.Build.0 = Debug|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x64.Deploy.0 = Debug|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x86.ActiveCfg = Debug|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x86.Build.0 = Debug|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Debug|x86.Deploy.0 = Debug|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|Any CPU.ActiveCfg = Release|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|ARM.ActiveCfg = Release|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|ARM.Build.0 = Release|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|ARM.Deploy.0 = Release|ARM
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x64.ActiveCfg = Release|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x64.Build.0 = Release|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x64.Deploy.0 = Release|x64
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x86.ActiveCfg = Release|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x86.Build.0 = Release|x86
+		{2F2F77F4-80CC-4A8C-945A-5D7BC7FAF593}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
