@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using VidSwitch.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -15,16 +16,25 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace ExtronTouchSwitch
+namespace VidSwitch
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MainViewModel viewModel;
+
         public MainPage()
         {
+            this.DataContext = this.viewModel = new MainViewModel();
+
             this.InitializeComponent();
+        }
+
+        private void PresetButton_Checked(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
