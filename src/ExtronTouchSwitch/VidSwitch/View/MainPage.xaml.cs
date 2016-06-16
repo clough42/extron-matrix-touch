@@ -113,5 +113,11 @@ namespace VidSwitch
             OverridesDlg dlg = new OverridesDlg(this.settings);
             var result = await dlg.ShowAsync();
         }
+
+        private async void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            HelpDialog dlg = new HelpDialog();
+            await dlg.ShowAsync();
+        }
     }
 }

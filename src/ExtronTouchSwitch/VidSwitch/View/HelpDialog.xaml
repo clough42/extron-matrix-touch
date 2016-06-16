@@ -1,0 +1,129 @@
+﻿<ContentDialog
+    x:Class="VidSwitch.View.HelpDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VidSwitch.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    PrimaryButtonText="Close"
+    MaxWidth="700"
+    Width="700"
+    RequestedTheme="Dark">
+
+    <Grid>
+        <ScrollViewer Width="Auto" Height="370" Margin="0,16,0,0">
+            <RichTextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Paragraph FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">
+                    Tree City Matrix Video Switch Help
+                </Paragraph>
+                <Paragraph FontSize="20"  Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
+                    Main Screens (presets)
+                </Paragraph>
+                <Paragraph>
+                    The buttons on the left side of the main screen select the content that will be displayed
+                on the projectors and screens throughought the building.  Each preset has a pre-programmed
+                set of inputs that will be shown on each screen.  Touch a preset name to activate the preset.
+                The screens will immediately switch to show the selected content.
+                </Paragraph>
+                <Paragraph/>
+                <Paragraph>Some common presets are:</Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Mac Practice</Run>
+                    - Displays the Mac in the worship center and announcements in the lobby
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Mac Countdown</Run>
+                    - Displays the Mac and announcements on various screens for pre-service
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Mac Presentation</Run>
+                    - Displays the Mac in the worship center and the Camera in the lobby
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">PC Practice</Run>
+                    - Displays the PC in the worship center and announcements in the lobby
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">PC Countdown</Run>
+                    - Displays the PC and announcements on various screens for pre-service
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">PC Presentation</Run>
+                    - Displays the PC in the worship center and the Camera in the lobby
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">DVD 1</Run>
+                    - Displays DVD 1 on all screens
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run  Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Camera</Run>
+                    - Displays the camera on all screens
+                </Paragraph>
+                <Paragraph TextIndent="16">
+                    <Run Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Loop All</Run>
+                    - Displays the announcements loop on all screens
+                </Paragraph>
+                <Paragraph>
+                    Please leave the system set to
+                    <Run Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Loop All</Run>
+                    at the end of the service.                  
+                </Paragraph>
+                <Paragraph/>
+                <Paragraph FontSize="20" Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
+                    Preview Monitor
+                </Paragraph>
+                <Paragraph>
+                    The buttons on the right side of the main screen select which source will be shown on the
+                preview monitor.  The preview monitor is useful for viewing content before it is displayed
+                on the main screens.  Use this to monitor a video source like a camera or to cue up a DVD
+                before switching it to the main screens.
+                </Paragraph>
+                <Paragraph/>
+                
+                <Paragraph FontSize="20" Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
+                    Overrides
+                </Paragraph>
+                <Paragraph>
+                    Sometimes it is necessary to send a video source to one or more screens independent of
+                    the presets.  This may be used to show a DVD on a screen in the lobby while using the
+                    other screens for other purposes.
+                </Paragraph>
+                <Paragraph/>
+                <Paragraph>
+                    To set up an override, touch the "Overrides" icon at the top of the screen.  The overrides
+                    page will open.  For each screen, select the video source you would like to display on that
+                    screen.  Any screens set to "(none)" will continue to show the content selected by the current
+                    preset.  Any screens set with overrides will display the override content, regardless of the
+                    operation of the rest of the system.  Click "Save" to activate the selected overrides.
+                </Paragraph>
+                <Paragraph/>
+                <Paragraph>
+                    When overrides are active, the overrides icon will turn red as a reminder.  To clear overrides,
+                    click the button to open the overrides page, click "Clear All Overrides" and click "Save".
+                </Paragraph>
+                <Paragraph/>
+
+                <Paragraph FontSize="20" Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
+                    Settings
+                </Paragraph>
+                <Paragraph>
+                    The settings menu contains various screens for setting up the matrix switch controller, naming
+                    the inputs and outputs and configuring the port used to communicate with the switch.  These settings
+                    do not need to be modified during normal operation.
+                </Paragraph>
+                <Paragraph/>
+
+                <Paragraph FontSize="20" Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
+                    Help
+                </Paragraph>
+                <Paragraph>
+                    You already know how to access the help, since you're here reading it now.
+                </Paragraph>
+
+
+            </RichTextBlock>
+        </ScrollViewer>
+    </Grid>
+    
+</ContentDialog>

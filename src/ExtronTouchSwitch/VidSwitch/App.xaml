@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
-                    <Color x:Key="SystemAccentColor">#0078D7</Color>
+                    <Color x:Key="SystemAccentColor">#00ba6e</Color>
                     <!--Your accent color-->
 
                     <SolidColorBrush x:Key="SystemControlBackgroundAccentBrush" Color="{ThemeResource SystemAccentColor}" />
@@ -26,8 +26,6 @@
                     <SolidColorBrush x:Key="SystemControlHyperlinkTextBrush" Color="{ThemeResource SystemAccentColor}" />
                     <SolidColorBrush x:Key="ContentDialogBorderThemeBrush" Color="{ThemeResource SystemAccentColor}" />
                     <SolidColorBrush x:Key="JumpListDefaultEnabledBackground" Color="{ThemeResource SystemAccentColor}" />
-
-                    <Style BasedOn="{StaticResource DefaultToggleButtonStyle}" TargetType="RadioButton" />
 
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>

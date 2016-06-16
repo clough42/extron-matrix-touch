@@ -15,7 +15,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock TextWrapping="WrapWholeWords" Margin="8">Choose descriptive names for the video switch inputs.</TextBlock>
-            <Grid Margin="8">
+            <Grid Margin="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="300" />
@@ -39,14 +39,14 @@
                 <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="0,0,8,0">Input 7:</TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="7" VerticalAlignment="Center" Margin="0,0,8,0">Input 8:</TextBlock>
 
-                <TextBox x:Name="inputBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[0]}"/>
-                <TextBox x:Name="inputBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[1]}"/>
-                <TextBox x:Name="inputBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[2]}"/>
-                <TextBox x:Name="inputBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[3]}"/>
-                <TextBox x:Name="inputBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[4]}"/>
-                <TextBox x:Name="inputBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[5]}"/>
-                <TextBox x:Name="inputBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[6]}"/>
-                <TextBox x:Name="inputBox7" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Inputs[7]}"/>
+                <TextBox x:Name="inputBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[0]}"/>
+                <TextBox x:Name="inputBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[1]}"/>
+                <TextBox x:Name="inputBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[2]}"/>
+                <TextBox x:Name="inputBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[3]}"/>
+                <TextBox x:Name="inputBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[4]}"/>
+                <TextBox x:Name="inputBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[5]}"/>
+                <TextBox x:Name="inputBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[6]}"/>
+                <TextBox x:Name="inputBox7" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Inputs[7]}"/>
             </Grid>
 
         </StackPanel>

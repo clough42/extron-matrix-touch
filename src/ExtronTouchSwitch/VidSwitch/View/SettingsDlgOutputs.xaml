@@ -15,7 +15,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock TextWrapping="WrapWholeWords" Margin="8">Choose descriptive names for the video switch outputs.</TextBlock>
-            <Grid Margin="8">
+            <Grid Margin="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="300" />
@@ -38,13 +38,13 @@
                 <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="0,0,8,0">Output 7:</TextBlock>
 
 
-                <TextBox x:Name="outputBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[0]}"/>
-                <TextBox x:Name="outputBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[1]}"/>
-                <TextBox x:Name="outputBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[2]}"/>
-                <TextBox x:Name="outputBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[3]}"/>
-                <TextBox x:Name="outputBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[4]}"/>
-                <TextBox x:Name="outputBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[5]}"/>
-                <TextBox x:Name="outputBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Outputs[6]}"/>
+                <TextBox x:Name="outputBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[0]}"/>
+                <TextBox x:Name="outputBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[1]}"/>
+                <TextBox x:Name="outputBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[2]}"/>
+                <TextBox x:Name="outputBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[3]}"/>
+                <TextBox x:Name="outputBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[4]}"/>
+                <TextBox x:Name="outputBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[5]}"/>
+                <TextBox x:Name="outputBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" Text="{Binding Outputs[6]}"/>
             </Grid>
 
         </StackPanel>

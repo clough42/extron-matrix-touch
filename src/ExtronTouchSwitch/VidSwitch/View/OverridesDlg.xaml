@@ -15,12 +15,13 @@
 
     <ContentDialog.Resources>
         <conv:AddZeroNoneConverter x:Key="AddZeroNone"/>
+        <conv:AddColonConverter x:Key="AddColon"/>
     </ContentDialog.Resources>
 
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock TextWrapping="WrapWholeWords" Margin="8">Select overrides to lock screens to individual inputs.</TextBlock>
-            <Grid Margin="8">
+            <Grid Margin="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="300" />
@@ -36,27 +37,27 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 
-                <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[0]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[1]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[2]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[3]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[4]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[5]}"/>
-                <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[6]}"/>
+                <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[0], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[1], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[2], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[3], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[4], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[5], Converter={StaticResource AddColon}}"/>
+                <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[6], Converter={StaticResource AddColon}}"/>
 
-                <ComboBox x:Name="overrideBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[0]}"/>
-                <ComboBox x:Name="overrideBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[1]}"/>
-                <ComboBox x:Name="overrideBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[2]}"/>
-                <ComboBox x:Name="overrideBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[3]}"/>
-                <ComboBox x:Name="overrideBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[4]}"/>
-                <ComboBox x:Name="overrideBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[5]}"/>
-                <ComboBox x:Name="overrideBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" 
+                <ComboBox x:Name="overrideBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
                           ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[6]}"/>
 
                 <Button Name="clearAllButton" Grid.Row="7" Grid.Column="2" HorizontalAlignment="Stretch" Click="clearAllButton_Click"

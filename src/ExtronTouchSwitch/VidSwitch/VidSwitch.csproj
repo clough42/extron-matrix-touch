@@ -97,11 +97,15 @@
     </Compile>
     <Compile Include="Converter\ConditionalConverter.cs" />
     <Compile Include="Converter\AddZeroNoneConverter.cs" />
+    <Compile Include="Converter\AddColonConverter.cs" />
     <Compile Include="Service\SerialPort.cs" />
     <Compile Include="Service\SwitchController.cs" />
     <Compile Include="Converter\StringToVisibilityConverter.cs" />
     <Compile Include="Model\Settings.cs" />
     <Compile Include="View\ExclusiveToggleButtonSet.cs" />
+    <Compile Include="View\HelpDialog.xaml.cs">
+      <DependentUpon>HelpDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -130,6 +134,8 @@
     <None Include="VidSwitch_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\TreeCity.png" />
+    <Content Include="Assets\TreeCItyFull.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -144,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\HelpDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -20,26 +20,39 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <CommandBar Grid.Row="0">
-                <CommandBar.Content>
-                    <TextBlock Text="Matrix video switch" Margin="8,8,0,0" FontSize="20" />
-                </CommandBar.Content>
+            <Grid Grid.Row="0" HorizontalAlignment="Stretch" Background="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-                <AppBarButton x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides" Click="overridesButton_Click"
+                <Image Grid.Column="0" Source="ms-appx:///Assets/TreeCityFull.png" Height="40" Width="40" Margin="8,0,0,0"/>
+                
+                <TextBlock Grid.Column="1" Text="Matrix Video Switch" Margin="8,8,0,9" FontSize="28" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+
+                <AppBarButton Grid.Column="2" x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides" Click="overridesButton_Click"
                               Background="{Binding OverridesActive, Converter={StaticResource Conditional}, ConverterParameter=#FFE31123}"/>
-                <CommandBar.SecondaryCommands>
-                    <AppBarButton x:Name="inputsButton" Icon="Video" Label="Inputs" Click="inputsButton_Click"/>
-                    <AppBarButton x:Name="outputsButton" Icon="Slideshow" Label="Outputs" Click="outputsButton_Click"/>
-                    <AppBarButton x:Name="presetsButton" Icon="Setting" Label="Presets" Click="presetsButton_Click"/>
-                    <AppBarButton x:Name="comPortButton" Label="Com Port" Click="comPortButton_Click"/>
-                </CommandBar.SecondaryCommands>
+                <AppBarButton Grid.Column="3" x:Name="settingsButton" Icon="Setting" Label="Settings">
+                    <AppBarButton.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem x:Name="inputsItem" Text="Inputs" Click="inputsButton_Click"/>
+                            <MenuFlyoutItem x:Name="outputsItem" Text="Outputs" Click="outputsButton_Click"/>
+                            <MenuFlyoutItem x:Name="presetsItem" Text="Presets" Click="presetsButton_Click"/>
+                            <MenuFlyoutItem x:Name="comPortItem" Text="Com Port" Click="comPortButton_Click"/>
+                        </MenuFlyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
+                <AppBarButton Grid.Column="4" x:Name="helpButton" Icon="Help" Label="Help" Click="helpButton_Click"/>
 
-            </CommandBar>
+            </Grid>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,8,0,0">
                 <!-- Presets -->
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Main Screens (Preset)" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <TextBlock Text="Main Screens (Preset)" Margin="24,0,0,0" FontSize="20" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0">
 
                         <StackPanel Orientation="Vertical" Width="240">
@@ -116,7 +129,7 @@
 
                 <!-- Preview -->
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Preview Monitor" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <TextBlock Text="Preview Monitor" Margin="24,0,0,0" FontSize="20" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0" >
 
                         <StackPanel Orientation="Vertical"  Width="240">
