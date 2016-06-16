@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -20,7 +21,7 @@ namespace VidSwitch.Model
     /// for the matrix control bar, and it has events so other parts of the system
     /// can be notified when settings change.
     /// </summary>
-    public class Settings
+    public class Settings : INotifyPropertyChanged
     {
         const int NUM_PRESETS = 16;
         const int NUM_INPUTS = 8;
@@ -55,7 +56,11 @@ namespace VidSwitch.Model
             this.OverridesChanged = null;
 
             LoadSettings();
+
+            //PrimeWithData();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// The com port where the matrix switch is connected
@@ -69,6 +74,10 @@ namespace VidSwitch.Model
                 if (this.ComPortChanged != null)
                 {
                     this.ComPortChanged(this);
+                }
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("ComPort"));
                 }
                 SaveSettings();
             }
@@ -141,6 +150,10 @@ namespace VidSwitch.Model
                     {
                         this.PresetsChanged(this);
                     }
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Presets"));
+                    }
                     SaveSettings();
                 }
             }
@@ -190,6 +203,10 @@ namespace VidSwitch.Model
                     {
                         this.InputsChanged(this);
                     }
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Inputs"));
+                    }
                     SaveSettings();
                 }
             }
@@ -234,6 +251,10 @@ namespace VidSwitch.Model
                     {
                         this.OutputsChanged(this);
                     }
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Outputs"));
+                    }
                     SaveSettings();
                 }
             }
@@ -262,6 +283,10 @@ namespace VidSwitch.Model
                 {
                     this.SelectedPresetChanged(this);
                 }
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("SelectedPreset"));
+                }
             }
         }
 
@@ -284,6 +309,10 @@ namespace VidSwitch.Model
                 if (this.SelectedPreviewChanged != null)
                 {
                     this.SelectedPreviewChanged(this);
+                }
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("SelectedPreview"));
                 }
             }
         }
@@ -325,6 +354,10 @@ namespace VidSwitch.Model
                     if (this.OverridesChanged != null)
                     {
                         this.OverridesChanged(this);
+                    }
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Overrides"));
                     }
                     //SaveSettings();
                 }

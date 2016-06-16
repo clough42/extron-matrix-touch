@@ -31,18 +31,11 @@ namespace VidSwitch
         public MainPage()
         {
             this.settings = new Settings();
-            this.settings.InputsChanged += new InputsChangedHandler(settings_InputsChanged);
-            this.settings.PresetsChanged += new PresetsChangedHandler(settings_PresetsChanged);
             this.settings.OverridesChanged += new OverridesChangedHandler(settings_OverridesChanged);
             this.controller = new SwitchController(this.settings);
 
             this.DataContext = this.settings;
-
             this.InitializeComponent();
-
-            // call these to make sure the comboboxes are filled in
-            settings_PresetsChanged(this.settings);
-            settings_InputsChanged(this.settings);
 
             new ExclusiveToggleButtonSet(
                 this.presetButton0,
@@ -87,16 +80,6 @@ namespace VidSwitch
         }
 
         private void settings_OverridesChanged(Settings settings)
-        {
-            
-        }
-
-        private void settings_PresetsChanged(Settings settings)
-        {
-            
-        }
-
-        private void settings_InputsChanged(Settings settings)
         {
             
         }

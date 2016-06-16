@@ -42,70 +42,70 @@
 
                         <StackPanel Orientation="Vertical" Width="240">
                             <ToggleButton x:Name="presetButton0" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Presets[0], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[0]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[0], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[0], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton1" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[1], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[1]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[1], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[1], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton2" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[2], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[2]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[2], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[2], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton3" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[3], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[3]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[3], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[3], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton4" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[4], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[4]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[4], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[4], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton5" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[5], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[5]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[5], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[5], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton6" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[6], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[6]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[6], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[6], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton7" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[7], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[7]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[7], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[7], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
                         <StackPanel Orientation="Vertical"  Width="240">
                             <ToggleButton x:Name="presetButton8" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[8], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[8]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[8], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[8], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton9" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[9], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[9]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[9], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[9], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton10" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[10], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[10]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[10], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[10], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton11" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[11], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[11]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[11], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[11], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton12" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Presets[12], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[12]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[12], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[12], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton13" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Presets[13], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[13]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[13], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[13], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton14" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Presets[14], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[14]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[14], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[14], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton15" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Presets[15], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Presets[15]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[15], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Presets[15], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
                     </StackPanel>
@@ -119,36 +119,36 @@
 
                         <StackPanel Orientation="Vertical"  Width="240">
                             <ToggleButton x:Name="previewButton0" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[0], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[0]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[0], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[0], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton1" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[1], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[1]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[1], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[1], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton2" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[2], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[2]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[2], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[2], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton3" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[3], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[3]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[3], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[3], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton4" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[4], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[4]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[4], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[4], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton5" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[5], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[5]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[5], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[5], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton6" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[6], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[6]}" FontSize="20" />
+                                          Visibility="{Binding Inputs[6], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[6], Mode=OneWay}" FontSize="20" />
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton7" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Inputs[7], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Inputs[7]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[7], Converter={StaticResource StringToVisibility}, Mode=OneWay}">
+                                <TextBlock Text="{Binding Inputs[7], Mode=OneWay}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
 
