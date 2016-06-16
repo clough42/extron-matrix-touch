@@ -10,7 +10,7 @@ namespace VidSwitch.ViewModel
     {
         public MainViewModel()
         {
-            this.PresetChoice = new ChoiceViewModel("Preset",
+            this.PresetChoice = new ChoiceViewModel("Main Screens (Preset)",
                 new string[]
                 {
                     "Loop All",
@@ -31,7 +31,7 @@ namespace VidSwitch.ViewModel
                     ""
                 });
 
-            this.PreviewChoice = new ChoiceViewModel("Preview",
+            this.PreviewChoice = new ChoiceViewModel("Preview Monitor",
                 new String[]
                 {
                     "Production PC",

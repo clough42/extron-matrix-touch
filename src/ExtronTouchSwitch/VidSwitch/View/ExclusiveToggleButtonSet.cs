@@ -8,14 +8,15 @@ using Windows.UI.Xaml.Controls.Primitives;
 
 namespace VidSwitch.View
 {
+    public delegate void ItemSelectedHandler(int choice);
+
     public class ExclusiveToggleButtonSet
     {
         private ToggleButton[] buttons;
-        private ChoiceViewModel choice;
+        private int selected = -1;
 
-        public ExclusiveToggleButtonSet(ChoiceViewModel choice, params ToggleButton[] buttons)
+        public ExclusiveToggleButtonSet(params ToggleButton[] buttons)
         {
-            this.choice = choice;
             this.buttons = buttons;
 
             foreach( ToggleButton button in buttons )
@@ -24,6 +25,8 @@ namespace VidSwitch.View
                 button.Unchecked += Button_UnChecked;
             }
         }
+
+        public ItemSelectedHandler ItemSelected;
 
         private void Button_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
@@ -35,9 +38,13 @@ namespace VidSwitch.View
                 {
                     if (button == buttons[i])
                     {
-                        if (this.choice.Selected != i)
+                        if (this.selected != i)
                         {
-                            this.choice.Selected = i;
+                            this.selected = i;
+                            if( this.ItemSelected != null )
+                            {
+                                this.ItemSelected(this.selected);
+                            }
                         }
                     }
                 }
@@ -61,7 +68,7 @@ namespace VidSwitch.View
                 for (int i = 0; i < buttons.Length; i++)
                 {
                     // if the selected button is turned off
-                    if (button == buttons[i] && this.choice.Selected == i)
+                    if (button == buttons[i] && this.selected == i)
                     {
                         button.IsChecked = true; // turn it back on
                     }

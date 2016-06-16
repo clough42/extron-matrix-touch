@@ -95,9 +95,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\SerialPort.cs" />
+    <Compile Include="Service\SwitchController.cs" />
     <Compile Include="ViewModel\ChoiceViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="Converter\StringToVisibilityConverter.cs" />
+    <Compile Include="Model\Settings.cs" />
     <Compile Include="View\ExclusiveToggleButtonSet.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -130,10 +133,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

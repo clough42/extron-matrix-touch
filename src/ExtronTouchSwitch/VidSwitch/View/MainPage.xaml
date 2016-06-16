@@ -36,76 +36,76 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <!-- Presets -->
-                <StackPanel Orientation="Vertical" DataContext="{Binding PresetChoice}">
-                    <TextBlock Text="{Binding Name}" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Main screens (preset)" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0">
 
                         <StackPanel Orientation="Vertical" Width="240">
                             <ToggleButton x:Name="presetButton0" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Choices[0], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[0]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[0], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[0]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton1" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[1], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[1]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[1], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[1]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton2" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[2], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[2]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[2], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[2]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton3" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[3], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[3]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[3], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[3]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton4" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[4], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[4]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[4], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[4]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton5" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[5], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[5]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[5], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[5]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton6" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[6], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[6]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[6], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[6]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton7" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[7], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[7]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[7], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[7]}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
                         <StackPanel Orientation="Vertical"  Width="240">
                             <ToggleButton x:Name="presetButton8" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[8], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[8]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[8], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[8]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton9" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[9], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[9]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[9], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[9]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton10" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[10], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[10]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[10], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[10]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton11" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[11], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[11]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[11], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[11]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton12" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[12], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[12]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[12], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[12]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton13" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Choices[13], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[13]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[13], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[13]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton14" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Choices[14], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[14]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[14], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[14]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="presetButton15" Margin="4" HorizontalAlignment="Stretch" 
-                                          Visibility="{Binding Choices[15], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[15]}" FontSize="20"/>
+                                          Visibility="{Binding Presets[15], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Presets[15]}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
                     </StackPanel>
@@ -113,42 +113,42 @@
                 </StackPanel>
 
                 <!-- Preview -->
-                <StackPanel Orientation="Vertical" DataContext="{Binding PreviewChoice}">
-                    <TextBlock Text="{Binding Name}" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Preview monitor" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0" >
 
                         <StackPanel Orientation="Vertical"  Width="240">
                             <ToggleButton x:Name="previewButton0" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[0], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[0]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[0], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[0]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton1" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[1], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[1]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[1], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[1]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton2" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[2], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[2]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[2], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[2]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton3" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[3], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[3]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[3], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[3]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton4" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[4], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[4]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[4], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[4]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton5" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[5], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[5]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[5], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[5]}" FontSize="20"/>
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton6" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[6], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[6]}" FontSize="20" />
+                                          Visibility="{Binding Inputs[6], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[6]}" FontSize="20" />
                             </ToggleButton>
                             <ToggleButton x:Name="previewButton7" Margin="4" HorizontalAlignment="Stretch"
-                                          Visibility="{Binding Choices[7], Converter={StaticResource StringToVisibility}}">
-                                <TextBlock Text="{Binding Choices[7]}" FontSize="20"/>
+                                          Visibility="{Binding Inputs[7], Converter={StaticResource StringToVisibility}}">
+                                <TextBlock Text="{Binding Inputs[7]}" FontSize="20"/>
                             </ToggleButton>
                         </StackPanel>
 

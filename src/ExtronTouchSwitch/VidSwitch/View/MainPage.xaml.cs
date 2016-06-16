@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using VidSwitch.Model;
+using VidSwitch.Service;
 using VidSwitch.View;
 using VidSwitch.ViewModel;
 using Windows.Foundation;
@@ -24,16 +26,26 @@ namespace VidSwitch
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private MainViewModel viewModel;
+        private Settings settings;
+        private SwitchController controller;
 
         public MainPage()
         {
-            this.DataContext = this.viewModel = new MainViewModel();
+            this.settings = new Settings();
+            this.settings.InputsChanged += new InputsChangedHandler(settings_InputsChanged);
+            this.settings.PresetsChanged += new PresetsChangedHandler(settings_PresetsChanged);
+            this.settings.OverridesChanged += new OverridesChangedHandler(settings_OverridesChanged);
+            this.controller = new SwitchController(this.settings);
+
+            this.DataContext = this.settings;
 
             this.InitializeComponent();
 
+            // call these to make sure the comboboxes are filled in
+            settings_PresetsChanged(this.settings);
+            settings_InputsChanged(this.settings);
+
             new ExclusiveToggleButtonSet(
-                this.viewModel.PresetChoice,
                 this.presetButton0,
                 this.presetButton1,
                 this.presetButton2,
@@ -49,10 +61,10 @@ namespace VidSwitch
                 this.presetButton12,
                 this.presetButton13,
                 this.presetButton14,
-                this.presetButton15);
+                this.presetButton15
+                ).ItemSelected += new ItemSelectedHandler(preset_ItemSelected);
 
             new ExclusiveToggleButtonSet(
-                this.viewModel.PreviewChoice,
                 this.previewButton0,
                 this.previewButton1,
                 this.previewButton2,
@@ -61,12 +73,34 @@ namespace VidSwitch
                 this.previewButton5,
                 this.previewButton6,
                 this.previewButton7
-                );
+                ).ItemSelected += new ItemSelectedHandler(preview_ItemSelected);
+
         }
 
-        private void PresetButton_Checked(object sender, RoutedEventArgs e)
+        private void preview_ItemSelected(int choice)
+        {
+            settings.SelectedPreview = choice + 1;
+        }
+
+        private void preset_ItemSelected(int choice)
+        {
+            settings.SelectedPreset = choice + 1;
+        }
+
+        private void settings_OverridesChanged(Settings settings)
         {
             
         }
+
+        private void settings_PresetsChanged(Settings settings)
+        {
+            
+        }
+
+        private void settings_InputsChanged(Settings settings)
+        {
+            
+        }
+
     }
 }
