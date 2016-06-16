@@ -97,8 +97,6 @@
     </Compile>
     <Compile Include="Service\SerialPort.cs" />
     <Compile Include="Service\SwitchController.cs" />
-    <Compile Include="ViewModel\ChoiceViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="Converter\StringToVisibilityConverter.cs" />
     <Compile Include="Model\Settings.cs" />
     <Compile Include="View\ExclusiveToggleButtonSet.cs" />

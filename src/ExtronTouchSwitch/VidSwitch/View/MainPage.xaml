@@ -37,7 +37,7 @@
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <!-- Presets -->
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Main screens (preset)" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <TextBlock Text="Main Screens (Preset)" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0">
 
                         <StackPanel Orientation="Vertical" Width="240">
@@ -114,7 +114,7 @@
 
                 <!-- Preview -->
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Preview monitor" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <TextBlock Text="Preview Monitor" Margin="24,8,0,0" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     <StackPanel Orientation="Horizontal" Margin="20,0,20,0" >
 
                         <StackPanel Orientation="Vertical"  Width="240">

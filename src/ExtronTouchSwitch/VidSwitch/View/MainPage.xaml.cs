@@ -6,7 +6,6 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using VidSwitch.Model;
 using VidSwitch.Service;
 using VidSwitch.View;
-using VidSwitch.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;

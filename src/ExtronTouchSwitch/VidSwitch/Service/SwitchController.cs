@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using VidSwitch.Model;
-using VidSwitch.ViewModel;
 
 namespace VidSwitch.Service
 {
