@@ -10,6 +10,7 @@
 
     <Page.Resources>
         <conv:StringToVisibilityConverter x:Key="StringToVisibility"/>
+        <conv:ConditionalConverter x:Key="Conditional"/>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -21,15 +22,16 @@
 
             <CommandBar Grid.Row="0">
                 <CommandBar.Content>
-                    <TextBlock Text="Matrix video switch" Margin="8,8,0,0" FontSize="20"/>
+                    <TextBlock Text="Matrix video switch" Margin="8,8,0,0" FontSize="20" />
                 </CommandBar.Content>
 
-                <AppBarButton x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides"/>
-
+                <AppBarButton x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides" Click="overridesButton_Click"
+                              Background="{Binding OverridesActive, Converter={StaticResource Conditional}, ConverterParameter=#FFE31123}"/>
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:Name="inputsButton" Icon="Video" Label="Inputs"/>
-                    <AppBarButton x:Name="outputsButton" Icon="Slideshow" Label="Outputs"/>
-                    <AppBarButton x:Name="presetsButton" Icon="Setting" Label="Presets"/>
+                    <AppBarButton x:Name="inputsButton" Icon="Video" Label="Inputs" Click="inputsButton_Click"/>
+                    <AppBarButton x:Name="outputsButton" Icon="Slideshow" Label="Outputs" Click="outputsButton_Click"/>
+                    <AppBarButton x:Name="presetsButton" Icon="Setting" Label="Presets" Click="presetsButton_Click"/>
+                    <AppBarButton x:Name="comPortButton" Label="Com Port" Click="comPortButton_Click"/>
                 </CommandBar.SecondaryCommands>
 
             </CommandBar>

@@ -84,5 +84,34 @@ namespace VidSwitch
             
         }
 
+        private async void comPortButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsDlgComPort dlg = new SettingsDlgComPort(this.settings);
+            var result = await dlg.ShowAsync();
+        }
+
+        private async void inputsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsDlgInputs dlg = new SettingsDlgInputs(this.settings);
+            var result = await dlg.ShowAsync();
+        }
+
+        private async void outputsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsDlgOutputs dlg = new SettingsDlgOutputs(this.settings);
+            var result = await dlg.ShowAsync();
+        }
+
+        private async void presetsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsDlgPresets dlg = new SettingsDlgPresets(this.settings);
+            var result = await dlg.ShowAsync();
+        }
+
+        private async void overridesButton_Click(object sender, RoutedEventArgs e)
+        {
+            OverridesDlg dlg = new OverridesDlg(this.settings);
+            var result = await dlg.ShowAsync();
+        }
     }
 }

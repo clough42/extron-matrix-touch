@@ -95,6 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\ConditionalConverter.cs" />
+    <Compile Include="Converter\AddZeroNoneConverter.cs" />
     <Compile Include="Service\SerialPort.cs" />
     <Compile Include="Service\SwitchController.cs" />
     <Compile Include="Converter\StringToVisibilityConverter.cs" />
@@ -104,6 +106,22 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\MessageBox.cs" />
+    <Compile Include="View\OverridesDlg.xaml.cs">
+      <DependentUpon>OverridesDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsDlgComPort.xaml.cs">
+      <DependentUpon>SettingsDlgComPort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsDlgInputs.xaml.cs">
+      <DependentUpon>SettingsDlgInputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsDlgOutputs.xaml.cs">
+      <DependentUpon>SettingsDlgOutputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsDlgPresets.xaml.cs">
+      <DependentUpon>SettingsDlgPresets.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -129,6 +147,26 @@
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\OverridesDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsDlgComPort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsDlgInputs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsDlgOutputs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsDlgPresets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup />

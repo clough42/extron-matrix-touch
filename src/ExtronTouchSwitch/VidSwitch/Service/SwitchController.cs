@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using VidSwitch.Model;
+using VidSwitch.View;
 
 namespace VidSwitch.Service
 {
@@ -72,7 +73,7 @@ namespace VidSwitch.Service
             }
             catch (Exception e)
             {
-                //MessageBox.Show("ERROR creating serial port\r\n" + e.ToString());
+                MessageBox.Show("ERROR creating serial port\r\n" + e.ToString());
             }
         }
 
@@ -107,7 +108,7 @@ namespace VidSwitch.Service
         {
             if (port == null)
             {
-                //MessageBox.Show("A COM port has not been configured");
+                MessageBox.Show("A COM port has not been configured");
             }
             else
             {

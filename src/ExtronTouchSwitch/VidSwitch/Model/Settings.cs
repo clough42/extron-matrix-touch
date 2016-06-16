@@ -58,7 +58,7 @@ namespace VidSwitch.Model
 
             LoadSettings();
 
-            AutoassignComPort();
+            LoadValidComPorts();
 
             //PrimeWithData();
         }
@@ -91,17 +91,12 @@ namespace VidSwitch.Model
         /// </summary>
         public ComPortChangedHandler ComPortChanged;
 
-        private async void AutoassignComPort()
+        public string[] ValidComPorts { get; private set; }
+
+        private async void LoadValidComPorts()
         {
-            // if we don't have a port configured
-            if( this.ComPort == null )
-            {
-                // check to see if there's only one, and if so, use it
-                var ports = await SerialPort.GetPortNames();
-                if( ports.Length == 1 ) {
-                    this.ComPort = ports[0];
-                }
-            }
+            // check to see if there's only one, and if so, use it
+            this.ValidComPorts = await SerialPort.GetPortNames();   
         }
 
         /// <summary>
@@ -374,9 +369,28 @@ namespace VidSwitch.Model
                     if (PropertyChanged != null)
                     {
                         PropertyChanged(this, new PropertyChangedEventArgs("Overrides"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("OverridesActive")); // for binders
                     }
-                    //SaveSettings();
                 }
+            }
+        }
+
+        /// <summary>
+        /// OverridesActive.  Returns true if there are currently any overrides configured in the
+        /// system.
+        /// </summary>
+        public bool OverridesActive
+        {
+            get
+            {
+                foreach (int i in Overrides)
+                {
+                    if (i != 0)
+                    {
+                        return true;
+                    }
+                }
+                return false;
             }
         }
 
@@ -432,6 +446,7 @@ namespace VidSwitch.Model
 
         private void PrimeWithData()
         {
+            ComPort = null;
             Inputs = new string[]
                 {
                     "Production PC",
