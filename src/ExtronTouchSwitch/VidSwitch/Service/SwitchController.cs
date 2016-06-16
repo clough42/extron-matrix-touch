@@ -40,17 +40,6 @@ namespace VidSwitch.Service
             SwitchPreset(settings.SelectedPreset, settings.SelectedPreview, settings.Overrides);
         }
 
-        /// <summary>
-        /// Returns a list of valid com ports on this system.
-        /// </summary>
-        //public static string[] ValidComPorts
-        //{
-        //    get
-        //    {
-        //        return SerialPort.GetPortNames();
-        //    }
-        //}
-
         private void OpenComPort(string comPort)
         {
             try
@@ -63,12 +52,13 @@ namespace VidSwitch.Service
 
                 if (comPort != null && comPort.Length > 0)
                 {
-                    port = new SerialPort(comPort);
-                    port.BaudRate = 9600;
+                    this.port = new SerialPort(comPort);
+                    this.port.BaudRate = 9600;
                     //port.DataBits = 8;
                     //port.StopBits = StopBits.One;
                     //port.Parity = Parity.None;
                     //port.Handshake = Handshake.None;
+                    this.port.Open();
                 }
             }
             catch (Exception e)
@@ -104,7 +94,7 @@ namespace VidSwitch.Service
             SendCommand(command.ToString());
         }
 
-        private void SendCommand(string command)
+        private async void SendCommand(string command)
         {
             if (port == null)
             {
@@ -112,9 +102,7 @@ namespace VidSwitch.Service
             }
             else
             {
-                port.Open();
                 port.Write(command);
-                port.Close();
             }
         }
 
