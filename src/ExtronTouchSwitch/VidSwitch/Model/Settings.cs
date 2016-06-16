@@ -59,8 +59,6 @@ namespace VidSwitch.Model
             LoadSettings();
 
             LoadValidComPorts();
-
-            //PrimeWithData();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -441,52 +439,6 @@ namespace VidSwitch.Model
             {
                 this.Outputs[i] = localSettings.Values[OUTPUT + (i + 1)] as string;
             }
-        }
-
-
-        private void PrimeWithData()
-        {
-            ComPort = null;
-            Inputs = new string[]
-                {
-                    "Production PC",
-                    "Loop PC",
-                    "DVD 1",
-                    "Camera 1",
-                    "DVD 2 /TV",
-                    "Satellite",
-                    "Mac",
-                    null
-                };
-            Presets = new string[]
-                {
-                    "Loop All",
-                    "PC Countdown",
-                    "PC Presentation",
-                    "DVD 1",
-                    "Camera",
-                    "Transition",
-                    "PC Practice",
-                    "Satellite",
-                    "DVD 2 / TV",
-                    "Imag Split",
-                    "Mac Presentation",
-                    "Mac Countdown",
-                    "Mac Practice",
-                    null,
-                    null,
-                    null
-                };
-            Outputs = new String[]
-                {
-                    "Left Projector",
-                    "Right Projector",
-                    "Rear Projector",
-                    "Lobby Right",
-                    "Lobby Right-Middle",
-                    "Lobby Left-Middle",
-                    "Lobby Left"
-                };
         }
 
     }
