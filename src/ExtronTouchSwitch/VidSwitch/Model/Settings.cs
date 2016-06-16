@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using VidSwitch.Service;
 
 namespace VidSwitch.Model
 {
@@ -57,6 +58,8 @@ namespace VidSwitch.Model
 
             LoadSettings();
 
+            AutoassignComPort();
+
             //PrimeWithData();
         }
 
@@ -87,6 +90,19 @@ namespace VidSwitch.Model
         /// Event: triggered whenever the com port is changed
         /// </summary>
         public ComPortChangedHandler ComPortChanged;
+
+        private async void AutoassignComPort()
+        {
+            // if we don't have a port configured
+            if( this.ComPort == null )
+            {
+                // check to see if there's only one, and if so, use it
+                var ports = await SerialPort.GetPortNames();
+                if( ports.Length == 1 ) {
+                    this.ComPort = ports[0];
+                }
+            }
+        }
 
         /// <summary>
         /// The number of presets on the switch
