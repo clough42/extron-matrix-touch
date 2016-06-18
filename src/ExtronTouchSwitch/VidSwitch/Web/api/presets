@@ -1,0 +1,21 @@
+﻿{
+  "selectedPreset": 3,
+  "presets": [
+    {
+      "index": 1,
+      "name": "Loop All"
+    },
+    {
+      "index": 2,
+      "name": "Practice"
+    },
+    {
+      "index": 3,
+      "name": "Countdown"
+    },
+    {
+      "index": 4,
+      "name": "Presentation"
+    }
+  ]
+}

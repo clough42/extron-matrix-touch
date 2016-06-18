@@ -19,6 +19,8 @@ namespace VidSwitch.Service
 
         public WebServer(Settings settings)
         {
+            PresetsRESTController.Settings = settings;
+
             httpServer = new HttpServer(LISTEN_PORT);
 
             httpServer.RegisterRoute(new StaticFileRouteHandler(STATIC_ASSETS_FOLDER));

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div ng-controller="VidSwitchCtrl" ng-cloak="" ng-app="vidSwitch" layout="column" layout-fill>
+    <div ng-controller="VidSwitchCtrl" ng-cloak="" ng-app="vidSwitch" layout="column" layout-fill id="popupContainer">
 
         <md-toolbar>
             <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
@@ -31,7 +31,7 @@
             <form>
                 <md-input-container>
                     <label>Preset</label>
-                    <md-select ng-model="selectedPreset" ng-change="userChangedPreset()">
+                    <md-select ng-model="selectedPreset" ng-change="userChangedPreset($event)">
                         <md-option ng-repeat="preset in presets" value="{{preset.index}}">
                             {{preset.name}}
                         </md-option>
@@ -52,6 +52,7 @@
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js'></script>
 
+    <script src="js/sha256.js"></script>
     <script src="js/vidswitch.js"></script>
     <script src="js/vidswitch-controller.js"></script>
     <script src="js/vidswitch-config.js"></script>

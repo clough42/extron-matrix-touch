@@ -2,8 +2,7 @@
 
     $mdThemingProvider.theme('default')
         .primaryPalette('green')
-        .accentPalette('red')
-        .dark();
+        .accentPalette('red');
 
 });
 

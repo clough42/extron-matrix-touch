@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VidSwitch.Model;
+using Windows.Security.Cryptography;
+using Windows.Security.Cryptography.Core;
+using Windows.Storage.Streams;
 using Windows.UI.Core;
 
 namespace VidSwitch.Service
@@ -15,8 +18,6 @@ namespace VidSwitch.Service
     {
         // This totally sucks, but I can't figure out how to inject into the instance
         public static Settings Settings { get; set; }
-
-        public static string AccessKey { get; set; }
 
         public class PresetsResponse
         {
@@ -51,9 +52,28 @@ namespace VidSwitch.Service
             return new GetResponse(GetResponse.ResponseStatus.OK, response);
         }
 
-        [UriFormat("/presets/select/{index}")]
-        public async Task<GetResponse> SelectPreset(int index)
+        [UriFormat("/presets/select/{index}?hash={hash}&timestamp={timestamp}")]
+        public async Task<GetResponse> SelectPresetX(int index, int timestamp, string hash)
         {
+            return await SelectPreset(index, timestamp, hash);
+        }
+
+        [UriFormat("/presets/select/{index}?timestamp={timestamp}&hash={hash}")]
+        public async Task<GetResponse> SelectPreset(int index, int timestamp, string hash)
+        {
+            // first, authorize the request
+            int unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            int timeDiff = Math.Abs(timestamp - unixTimestamp);
+            
+            string authStr = String.Format("/api/presets/select/{0} {1} {2}", index, timestamp, Settings.AccessKey);
+            string hashStr = Hash(authStr);
+
+            if( hashStr != hash || timeDiff > 300 /* allow 5 minutes clock misalignment */)
+            {
+                return new GetResponse(GetResponse.ResponseStatus.NotFound);
+            }
+
+            // now, carry it out
             try
             {
                 await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
@@ -69,6 +89,22 @@ namespace VidSwitch.Service
             }
         }
 
+        private string Hash(string inStr)
+        {
+            // Convert the message string to binary data.
+            IBuffer buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(inStr, BinaryStringEncoding.Utf8);
 
+            // Create a HashAlgorithmProvider object.
+            HashAlgorithmProvider objAlgProv = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Sha256);
+
+            // Hash the message.
+            IBuffer buffHash = objAlgProv.HashData(buffUtf8Msg);
+
+            // Convert the hash to a string (for display).
+            String strHashBase64 = CryptographicBuffer.EncodeToHexString(buffHash);
+
+            // Return the encoded string
+            return strHashBase64;
+        }
     }
 }
