@@ -46,19 +46,26 @@
                 <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="0,0,8,0" Text="{Binding Outputs[6], Converter={StaticResource AddColon}}"/>
 
                 <ComboBox x:Name="overrideBox0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[0]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[0]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[1]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[1]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[2]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[2]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[3]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[3]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[4]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[4]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[5]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[5]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
                 <ComboBox x:Name="overrideBox6" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,4,0,4" 
-                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[6]}"/>
+                          ItemsSource="{Binding Inputs, Converter={StaticResource AddZeroNone}}" SelectedIndex="{Binding Overrides[6]}"
+                          SelectionChanged="overrideBox_SelectionChanged"/>
 
                 <Button Name="clearAllButton" Grid.Row="7" Grid.Column="2" HorizontalAlignment="Stretch" Click="clearAllButton_Click"
                         Padding="32,4,32,4" Margin="0,8,0,8">

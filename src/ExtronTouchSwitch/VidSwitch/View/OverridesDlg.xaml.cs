@@ -54,5 +54,15 @@ namespace VidSwitch.View
                 overrideBox5.SelectedIndex =
                 overrideBox6.SelectedIndex = 0;
         }
+
+        private void overrideBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox box = sender as ComboBox;
+            string item = box.SelectedItem as string;
+            if( item == null || item.Length == 0 )
+            {
+                box.SelectedIndex = 0;
+            }
+        }
     }
 }
