@@ -24,23 +24,35 @@ namespace VidSwitch.Service
         public async void Open()
         {
             this.serialDevice = await SerialDevice.FromIdAsync(this.portName);
-            this.serialDevice.BaudRate = this.BaudRate;
-            this.serialDevice.DataBits = 8;
-            this.serialDevice.StopBits = SerialStopBitCount.One;
-            this.serialDevice.Parity = SerialParity.None;
-            this.serialDevice.Handshake = SerialHandshake.None;
+            if (this.serialDevice != null)
+            {
+                this.serialDevice.BaudRate = this.BaudRate;
+                this.serialDevice.DataBits = 8;
+                this.serialDevice.StopBits = SerialStopBitCount.One;
+                this.serialDevice.Parity = SerialParity.None;
+                this.serialDevice.Handshake = SerialHandshake.None;
 
-            this.writer = new DataWriter(serialDevice.OutputStream);
+                this.writer = new DataWriter(serialDevice.OutputStream);
+            }
         }
 
         public async void Write(String content)
         {
-            this.writer.WriteString(content);
-            await this.writer.StoreAsync();
+            if (this.serialDevice != null)
+            {
+                this.writer.WriteString(content);
+                await this.writer.StoreAsync();
+            }
         }
             
 
         public void Close() {
+            if( this.writer != null )
+            {
+                this.writer.DetachStream();
+                this.writer.Dispose();
+                this.writer = null;
+            }
             if (this.serialDevice != null)
             {
                 this.serialDevice.Dispose();
