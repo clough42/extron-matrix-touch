@@ -27,12 +27,14 @@ namespace VidSwitch
     {
         private Settings settings;
         private SwitchController controller;
+        private WebServer webServer;
 
         public MainPage()
         {
             this.settings = new Settings();
             this.settings.OverridesChanged += new OverridesChangedHandler(settings_OverridesChanged);
             this.controller = new SwitchController(this.settings);
+            this.webServer = new WebServer();
 
             this.DataContext = this.settings;
             this.InitializeComponent();
@@ -67,6 +69,7 @@ namespace VidSwitch
                 this.previewButton7
                 ).ItemSelected += new ItemSelectedHandler(preview_ItemSelected);
 
+            this.webServer.Start();
         }
 
         private void preview_ItemSelected(int choice)

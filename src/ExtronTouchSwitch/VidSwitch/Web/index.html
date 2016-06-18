@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tree City VidSwitch</title>
+
+    <link rel='stylesheet prefetch' href='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+    <div ng-controller="VidSwitchCtrl" ng-cloak="" ng-app="vidSwitch" layout="column" layout-fill scroll-glue>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                <span class="md-display-1">Video Switch</span>
+            </div>
+        </md-toolbar>
+
+        <md-content>
+            <form>
+                <md-input-container>
+                    <label>Preset</label>
+                    <md-select ng-model="selectedPreset">
+                        <md-option ng-repeat="preset in presets" value="{{preset.index}}">
+                            {{preset.name}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </form>
+        </md-content>
+
+    </div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js'></script>
+
+    <script src="js/vidswitch.js"></script>
+    <script src="js/vidswitch-controller.js"></script>
+    <script src="js/vidswitch-config.js"></script>
+
+
+</body>
+</html>
