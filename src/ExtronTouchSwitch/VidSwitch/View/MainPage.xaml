@@ -23,6 +23,7 @@
             <Grid Grid.Row="0" HorizontalAlignment="Stretch" Background="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -33,9 +34,13 @@
                 
                 <TextBlock Grid.Column="1" Text="Matrix Video Switch" Margin="8,8,0,9" FontSize="28" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 
-                <AppBarButton Grid.Column="2" x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides" Click="overridesButton_Click"
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="2">
+                    <TextBlock x:Name="timeBlock" HorizontalAlignment="Center">(time)</TextBlock>
+                    <TextBlock x:Name="dateBlock" HorizontalAlignment="Center">(date)</TextBlock>
+                </StackPanel>
+                <AppBarButton Grid.Column="3" x:Name="overridesButton" Icon="SetLockScreen" Label="Overrides" Click="overridesButton_Click"
                               Background="{Binding OverridesActive, Converter={StaticResource Conditional}, ConverterParameter=#FFE31123}"/>
-                <AppBarButton Grid.Column="3" x:Name="settingsButton" Icon="Setting" Label="Settings">
+                <AppBarButton Grid.Column="4" x:Name="settingsButton" Icon="Setting" Label="Settings">
                     <AppBarButton.Flyout>
                         <MenuFlyout>
                             <MenuFlyoutItem x:Name="inputsItem" Text="Inputs" Click="inputsButton_Click"/>
@@ -45,7 +50,7 @@
                         </MenuFlyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
-                <AppBarButton Grid.Column="4" x:Name="helpButton" Icon="Help" Label="Help" Click="helpButton_Click"/>
+                <AppBarButton Grid.Column="5" x:Name="helpButton" Icon="Help" Label="Help" Click="helpButton_Click"/>
 
             </Grid>
 

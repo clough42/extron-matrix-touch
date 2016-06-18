@@ -8,6 +8,7 @@ using VidSwitch.Service;
 using VidSwitch.View;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System.Threading;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -74,6 +75,18 @@ namespace VidSwitch
                 ).ItemSelected += new ItemSelectedHandler(preview_ItemSelected);
 
             this.webServer.Start();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            DateTime now = DateTime.Now;
+            this.timeBlock.Text = String.Format("{0:T}", now);
+            this.dateBlock.Text = String.Format("{0:d}", now);
         }
 
         private void preview_ItemSelected(int choice)
