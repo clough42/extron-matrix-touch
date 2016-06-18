@@ -12,7 +12,7 @@ namespace VidSwitch.Service
 {
     class WebServer
     {
-        private const int LISTEN_PORT = 7777;
+        public const int LISTEN_PORT = 7777;
         private const string STATIC_ASSETS_FOLDER = @"Web";
 
         private HttpServer httpServer;

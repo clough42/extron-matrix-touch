@@ -50,7 +50,14 @@
                         </MenuFlyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
-                <AppBarButton Grid.Column="5" x:Name="helpButton" Icon="Help" Label="Help" Click="helpButton_Click"/>
+                <AppBarButton Grid.Column="5" x:Name="helpButton" Icon="Help" Label="Help">
+                    <AppBarButton.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem x:Name="showHelpItem" Text="Display Help" Click="helpButton_Click"/>
+                            <MenuFlyoutItem x:Name="remoteItem" Text="Remote Access" Click="remoteButton_Click"/>
+                        </MenuFlyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
 
             </Grid>
 

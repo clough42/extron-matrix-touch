@@ -1,7 +1,8 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Restup": "1.0.0-beta4"
+    "Restup": "1.0.0-beta4",
+    "ZXing.Net": "0.14.0.1"
   },
   "frameworks": {
     "uap10.0": {}

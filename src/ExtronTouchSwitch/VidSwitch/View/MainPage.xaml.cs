@@ -139,5 +139,11 @@ namespace VidSwitch
             HelpDialog dlg = new HelpDialog();
             await dlg.ShowAsync();
         }
+
+        private async void remoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dlg = new HelpRemoteAccessDialog();
+            await dlg.ShowAsync();
+        }
     }
 }
