@@ -134,7 +134,6 @@
     <None Include="VidSwitch_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\TreeCity.png" />
     <Content Include="Assets\TreeCItyFull.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
