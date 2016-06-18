@@ -29,17 +29,19 @@ namespace VidSwitch
         private SwitchController controller;
         private WebServer webServer;
 
+        private ExclusiveToggleButtonSet presetButtons;
+
         public MainPage()
         {
             this.settings = new Settings();
-            this.settings.OverridesChanged += new OverridesChangedHandler(settings_OverridesChanged);
+            this.settings.SelectedPresetChanged += new SelectedPresetChangedHandler(settings_SelectedPresetChanged);
             this.controller = new SwitchController(this.settings);
-            this.webServer = new WebServer();
+            this.webServer = new WebServer(this.settings);
 
             this.DataContext = this.settings;
             this.InitializeComponent();
 
-            new ExclusiveToggleButtonSet(
+            this.presetButtons = new ExclusiveToggleButtonSet(
                 this.presetButton0,
                 this.presetButton1,
                 this.presetButton2,
@@ -56,7 +58,9 @@ namespace VidSwitch
                 this.presetButton13,
                 this.presetButton14,
                 this.presetButton15
-                ).ItemSelected += new ItemSelectedHandler(preset_ItemSelected);
+                );
+            presetButtons.ItemSelected += new ItemSelectedHandler(preset_ItemSelected);
+
 
             new ExclusiveToggleButtonSet(
                 this.previewButton0,
@@ -82,9 +86,9 @@ namespace VidSwitch
             settings.SelectedPreset = choice + 1;
         }
 
-        private void settings_OverridesChanged(Settings settings)
+        private void settings_SelectedPresetChanged(Settings settings)
         {
-            
+            this.presetButtons.Select(settings.SelectedPreset - 1);
         }
 
         private async void comPortButton_Click(object sender, RoutedEventArgs e)

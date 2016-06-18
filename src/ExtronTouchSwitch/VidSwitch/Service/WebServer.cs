@@ -1,10 +1,12 @@
 ﻿using Devkoes.Restup.WebServer.File;
 using Devkoes.Restup.WebServer.Http;
+using Devkoes.Restup.WebServer.Rest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VidSwitch.Model;
 
 namespace VidSwitch.Service
 {
@@ -15,10 +17,16 @@ namespace VidSwitch.Service
 
         private HttpServer httpServer;
 
-        public WebServer()
+        public WebServer(Settings settings)
         {
             httpServer = new HttpServer(LISTEN_PORT);
+
             httpServer.RegisterRoute(new StaticFileRouteHandler(STATIC_ASSETS_FOLDER));
+
+            var restRouteHandler = new RestRouteHandler();
+            PresetsRESTController.Settings = settings;
+            restRouteHandler.RegisterController<PresetsRESTController>();
+            httpServer.RegisterRoute("api", restRouteHandler);
         }
 
         public async void Start()

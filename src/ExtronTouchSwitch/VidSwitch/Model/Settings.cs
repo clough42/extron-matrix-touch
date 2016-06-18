@@ -283,7 +283,7 @@ namespace VidSwitch.Model
             }
             set
             {
-                if (this.Presets[value - 1] == null)
+                if (value < 1 || value > this.NumPresets || this.Presets[value - 1] == null)
                 {
                     throw new ArgumentException("Preset " + value + " is not in the list of valid presets");
                 }

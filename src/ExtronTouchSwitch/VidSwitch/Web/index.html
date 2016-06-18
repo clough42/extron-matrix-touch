@@ -27,7 +27,7 @@
             <form>
                 <md-input-container>
                     <label>Preset</label>
-                    <md-select ng-model="selectedPreset">
+                    <md-select ng-model="selectedPreset" ng-change="userChangedPreset()">
                         <md-option ng-repeat="preset in presets" value="{{preset.index}}">
                             {{preset.name}}
                         </md-option>

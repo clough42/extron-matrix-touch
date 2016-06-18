@@ -99,6 +99,7 @@
     <Compile Include="Converter\ConditionalConverter.cs" />
     <Compile Include="Converter\AddZeroNoneConverter.cs" />
     <Compile Include="Converter\AddColonConverter.cs" />
+    <Compile Include="Service\PresetsRESTController.cs" />
     <Compile Include="Service\WebServer.cs" />
     <Compile Include="Service\SerialPort.cs" />
     <Compile Include="Service\SwitchController.cs" />

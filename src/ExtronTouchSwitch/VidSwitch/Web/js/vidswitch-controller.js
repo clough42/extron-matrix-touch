@@ -4,20 +4,21 @@
     $scope.selectedPreset = 0;
     
     function loadPresets() {
-        $http.get('api/presets.json')
+        $http.get('api/presets')
         .then(function (res) {
             $scope.presets = res.data.presets;
             $scope.selectedPreset = res.data.selectedPreset;
         });
-    }
+    };
 
-    $scope.submit = function () {
-        //if( $scope.command ) {
-        //$scope.gameOver = tooSmallEngine.execute($scope.command, $scope.messageStream);
-        //updateRoomDisplay();
-        //}
-        //$scope.command = '';
-    }
+    $scope.userChangedPreset = function () {
+        var uri = '/api/presets/select/' + $scope.selectedPreset;
+        $http.get(uri)
+        .then(function (res) {
+            $scope.presets = res.data.presets;
+            $scope.selectedPreset = res.data.selectedPreset;
+        });
+    };
 
     loadPresets();
 

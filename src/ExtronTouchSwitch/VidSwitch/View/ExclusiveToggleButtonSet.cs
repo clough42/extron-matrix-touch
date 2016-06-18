@@ -74,5 +74,10 @@ namespace VidSwitch.View
                 }
             }
         }
+
+        public void Select(int index)
+        {
+            buttons[index].IsChecked = true;
+        }
     }
 }
