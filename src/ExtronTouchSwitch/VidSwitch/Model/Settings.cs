@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using VidSwitch.Service;
+using Windows.Security.Cryptography;
+using Windows.Storage.Streams;
 
 namespace VidSwitch.Model
 {
@@ -35,6 +37,7 @@ namespace VidSwitch.Model
         private int selectedPreset;
         private int selectedPreview;
         private int[] overrides;
+        private string accessKey = null;
 
         /// <summary>
         /// Create a new instance of the Settings object.
@@ -95,6 +98,27 @@ namespace VidSwitch.Model
         {
             // check to see if there's only one, and if so, use it
             this.ValidComPorts = await SerialPort.GetPortNames();   
+        }
+
+        public string AccessKey
+        {
+            get
+            {
+                if( this.accessKey == null )
+                {
+                    GenerateAccessKey();
+                }
+                return this.accessKey;
+            }
+        }
+
+        public void GenerateAccessKey()
+        {
+            uint length = 16;
+            IBuffer buffer = CryptographicBuffer.GenerateRandom(length);
+            this.accessKey = CryptographicBuffer.EncodeToHexString(buffer);
+
+            this.SaveSettings();
         }
 
         /// <summary>
@@ -401,12 +425,14 @@ namespace VidSwitch.Model
         const string PRESET = "Preset";
         const string INPUT = "Input";
         const string OUTPUT = "Output";
+        const string ACCESSKEY = "AccessKey";
 
         private void SaveSettings()
         {
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
             localSettings.Values[COMPORT] = this.comPort;
+            localSettings.Values[ACCESSKEY] = this.accessKey;
             for (int i = 0; i < this.Presets.Length; i++)
             {
                 localSettings.Values[PRESET + (i + 1)] = this.Presets[i];
@@ -426,6 +452,7 @@ namespace VidSwitch.Model
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
             this.comPort = localSettings.Values[COMPORT] as string;
+            this.accessKey = localSettings.Values[ACCESSKEY] as string;
 
             for (int i = 0; i < this.Presets.Length; i++)
             {

@@ -24,7 +24,7 @@ namespace VidSwitch.Service
             httpServer.RegisterRoute(new StaticFileRouteHandler(STATIC_ASSETS_FOLDER));
 
             var restRouteHandler = new RestRouteHandler();
-            PresetsRESTController.Settings = settings;
+
             restRouteHandler.RegisterController<PresetsRESTController>();
             httpServer.RegisterRoute("api", restRouteHandler);
         }

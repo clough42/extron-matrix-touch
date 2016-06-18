@@ -15,7 +15,13 @@
             <TextBlock TextWrapping="WrapWholeWords">To control this switch remotely, visit the following URL with your
             web browser or mobile device.</TextBlock>
             <TextBlock x:Name="urlBlock" Margin="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" TextAlignment="Center">http://localhost:7777/</TextBlock>
-            <Image Name="imgQRCode" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+            <StackPanel Orientation="Horizontal">
+                <Image Name="imgQRCode" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8"></Image>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="277">
+                    <Button Name="regenButton" Margin="16" HorizontalAlignment="Center" Click="regenButton_Click">Regenerate Code</Button>
+                    <TextBlock Margin="16" TextWrapping="WrapWholeWords" HorizontalAlignment="Stretch" TextAlignment="Center">(All existing users will need to get the new URL.)</TextBlock>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </ContentDialog>

@@ -16,6 +16,8 @@ namespace VidSwitch.Service
         // This totally sucks, but I can't figure out how to inject into the instance
         public static Settings Settings { get; set; }
 
+        public static string AccessKey { get; set; }
+
         public class PresetsResponse
         {
             public int selectedPreset { get; set; }

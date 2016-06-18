@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using VidSwitch.Model;
 using VidSwitch.Service;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,13 +25,21 @@ namespace VidSwitch.View
 {
     public sealed partial class HelpRemoteAccessDialog : ContentDialog
     {
-        public HelpRemoteAccessDialog()
+        private Settings settings;
+
+        public HelpRemoteAccessDialog(Settings settings)
         {
+            this.settings = settings;
+
             this.InitializeComponent();
 
+            BindAccessUrl();
+        }
+
+        private void BindAccessUrl() { 
             string ipAddr = GetCurrentIpv4Address();
             if (ipAddr != null) {
-                string url = String.Format("http://{0}:{1}", ipAddr, WebServer.LISTEN_PORT);
+                string url = String.Format("http://{0}:{1}/#{2}", ipAddr, WebServer.LISTEN_PORT, settings.AccessKey);
                 this.urlBlock.Text = url;
 
                 IBarcodeWriter writer = new BarcodeWriter
@@ -78,6 +87,12 @@ namespace VidSwitch.View
             }
 
             return null;
+        }
+
+        private void regenButton_Click(object sender, RoutedEventArgs e)
+        {
+            settings.GenerateAccessKey();
+            BindAccessUrl();
         }
     }
 }
