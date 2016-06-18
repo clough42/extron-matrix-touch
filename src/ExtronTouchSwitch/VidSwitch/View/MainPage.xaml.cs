@@ -85,7 +85,7 @@ namespace VidSwitch
         private void Timer_Tick(object sender, object e)
         {
             DateTime now = DateTime.Now;
-            this.timeBlock.Text = String.Format("{0:T}", now);
+            this.timeBlock.Text = String.Format("{0:t}", now);
             this.dateBlock.Text = String.Format("{0:d}", now);
         }
 
