@@ -1,7 +1,8 @@
 ﻿angular.module('vidSwitch').config(function ($mdThemingProvider) {
 
-    $mdThemingProvider.theme('docs-dark', 'default')
-        .primaryPalette('grey')
+    $mdThemingProvider.theme('default')
+        .primaryPalette('green')
+        .accentPalette('red')
         .dark();
 
 });
